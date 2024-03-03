@@ -11,7 +11,7 @@ sigma_c = rho_c / rho_0
 
 W_S_range = np.linspace(1, 4000, 4000)  # Weight to surface N/m^2
 
-CD0 = 0.0194  # Parasite drag coefficient
+CD0 = 0.0202  # Parasite drag coefficient
 pi = 3.14159  # Pi
 AR = 11  # Aspect ratio of the wing
 e = 0.85  # Oswald efficiency number
@@ -32,11 +32,7 @@ Sto = 800  # Takeoff field length
 u = 0.05  # Friction coefficient
 C_Lmax = 2  # Max lift coefficient 
 C_LR = C_Lmax / (1.1**2)  # Take-off rotation lift coefficients
-<<<<<<< HEAD
 C_DG = 0.025  # Coefficient drag
-=======
-C_DG = 0.0236  # Coefficient drag
->>>>>>> d3fa5fe9da55caf00a3f22373cb62eb402d41f03
 L_D_max = 13  # Maximum lift to drag ratio
 ROC = 4.73 / 2  # Minimum rate of climb
 ROC_c = (4.73 / 2) / 260.8224354771  # Minimum rate of climb
@@ -113,23 +109,16 @@ W_TO = 1000 * P * W_P_D  # Takeoff weight in N
 S = W_TO / W_S_D  # Current wing area in m^2   
 M_TO = 1500 * 1000 * W_P_D / g  # Expected weight in kg 
 
-<<<<<<< HEAD
 Chord = (S/AR) **0.5
 WingSpan = Chord*AR
 
-=======
->>>>>>> d3fa5fe9da55caf00a3f22373cb62eb402d41f03
 # Results display
 print('Calculated using the provided equation:')
 print('S: ', S)
 print('P: ', P)
 print('MTO: ', M_TO)
-<<<<<<< HEAD
 print('Chord length: ', Chord)
 print('wing span: ', WingSpan)
-=======
-
->>>>>>> d3fa5fe9da55caf00a3f22373cb62eb402d41f03
 
 plt.fill_between(W_S_range, 0, W_Psl_Vmax, where=(W_S_range < W_S_D), color='yellow', alpha=0.3, label='Feasible flight envelope')
 plt.fill_between(W_S_range, 0, W_P_Sto, where=((W_S_D < W_S_range) & (W_S_range < W_S_Stall)), color='yellow', alpha=0.3)
