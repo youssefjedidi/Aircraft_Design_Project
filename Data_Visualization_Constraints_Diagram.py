@@ -109,8 +109,8 @@ W_TO = 1000 * P * W_P_D  # Takeoff weight in N
 S = W_TO / W_S_D  # Current wing area in m^2   
 M_TO = 1500 * 1000 * W_P_D / g  # Expected weight in kg 
 
-Chord = (S/(2*AR)) **0.5
-WingSpan = Chord*AR
+WingSpan = (AR*S) **0.5
+Chord = WingSpan/AR
 
 # Results display
 print('Calculated using the provided equation:')
