@@ -120,6 +120,8 @@ print('MTO: ', M_TO)
 print('Chord length: ', Chord)
 print('wing span: ', WingSpan)
 
+plt.scatter( 2015.64,0.0262, color='red', label='benchmark')#point taken from Dornier 228NG characteristics
+
 plt.fill_between(W_S_range, 0, W_Psl_Vmax, where=(W_S_range < W_S_D), color='yellow', alpha=0.3, label='Feasible flight envelope')
 plt.fill_between(W_S_range, 0, W_P_Sto, where=((W_S_D < W_S_range) & (W_S_range < W_S_Stall)), color='yellow', alpha=0.3)
 plt.legend()
